@@ -25,7 +25,9 @@
                 <a href="#primer" class="hover:text-blue-600 transition-colors">How Protection Works</a>
                 <a href="#how-it-works" class="hover:text-blue-600 transition-colors">The Attack</a>
                 <a href="#evaluations" class="hover:text-blue-600 transition-colors">Evaluations</a>
+                <a href="#insights" class="hover:text-blue-600 transition-colors">Insights</a>
                 <a href="#team" class="hover:text-blue-600 transition-colors">Team</a>
+                <a href="https://github.com/mlsecviswanath/img2imgdenoiser" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors flex items-center gap-1"><i data-lucide="github" class="w-4 h-4"></i> Code</a>
                 <a href="https://arxiv.org/abs/2602.22197" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">Read Paper</a>
             </div>
         </div>
@@ -46,12 +48,15 @@
         <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
             Our research shows that off-the-shelf image-to-image models can erase state-of-the-art image protections, e.g., invisible watermarks, style mimicry protections, and deepfake shields.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <div class="flex flex-col sm:flex-row justify-center flex-wrap gap-4">
             <a href="#how-it-works" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
                 See the Attack <i data-lucide="arrow-right" class="w-[18px] h-[18px]"></i>
             </a>
             <a href="https://arxiv.org/abs/2602.22197" target="_blank" rel="noopener noreferrer" class="bg-white text-slate-900 border border-slate-200 shadow-sm px-8 py-4 rounded-xl font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
                 Read the Full Paper
+            </a>
+            <a href="https://github.com/mlsecviswanath/img2imgdenoiser" target="_blank" rel="noopener noreferrer" class="bg-white text-slate-900 border border-slate-200 shadow-sm px-8 py-4 rounded-xl font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="github" class="w-5 h-5"></i> GitHub Code
             </a>
         </div>
     </header>
@@ -430,6 +435,55 @@
         </div>
     </section>
 
+    <!-- Insights / Takeaways Section -->
+    <section id="insights" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Does This Mean?</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">
+                    Our findings carry significant implications for everyday users trying to protect their content, as well as researchers designing the next generation of defenses.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- For Creators -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+                    <div class="bg-blue-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="user-x" class="text-blue-600 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">For Creators & Everyday Users</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        <strong>The Illusion of Safety:</strong> Current invisible protections—whether used to stop deepfakes, prevent art style mimicry, or watermark AI images—currently offer a false sense of security.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Because malicious actors can easily remove these defensive shields using widely available AI tools (like FLUX or GPT-4o) without needing specialized hacking skills, you should not rely solely on perturbation-based defenses to protect your digital content.
+                    </p>
+                </div>
+
+                <!-- For Security Community -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+                    <div class="bg-purple-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-alert" class="text-purple-600 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">For the AI Security Community</h3>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="text-purple-600 w-6 h-6 shrink-0"></i>
+                            <span><strong>Evaluate against SOTA Models:</strong> Defenses must be benchmarked against the latest generative AI tools. Newer foundation models naturally denoise protections far better than older models (like SD 1.5).</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="text-purple-600 w-6 h-6 shrink-0"></i>
+                            <span><strong>Simplicity Beats Complexity:</strong> Simple prompting of off-the-shelf denoisers matches or outperforms complex, highly specialized attack algorithms.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="text-purple-600 w-6 h-6 shrink-0"></i>
+                            <span><strong>A Universal Threat Vector:</strong> Foundation models act as a convergent threat. Distinct security problems (watermarking, unlearnability, style protection) all fall to the exact same denoising vulnerability.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Team / About Us -->
     <section id="team" class="py-24 bg-slate-900 text-white">
         <div class="max-w-6xl mx-auto px-4">
@@ -527,9 +581,14 @@
             <p class="text-slate-600 mb-10 text-lg">
                 Our findings demonstrate that the current approach to image protection is fundamentally flawed against modern AI. Dive into our 8 detailed case studies in the official paper.
             </p>
-            <a href="https://arxiv.org/abs/2602.22197" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/20">
-                Read Paper on arXiv
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://arxiv.org/abs/2602.22197" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/20">
+                    Read Paper on arXiv
+                </a>
+                <a href="https://github.com/mlsecviswanath/img2imgdenoiser" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-slate-900 border border-slate-300 px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-lg flex items-center justify-center gap-2">
+                    <i data-lucide="github" class="w-5 h-5"></i> View Source Code
+                </a>
+            </div>
             
             <p class="text-slate-500 text-sm mt-12 italic">
                 "Off-The-Shelf Generative Denoisers Are All You Need To Defeat Image Protection Schemes" (To appear in SATML 2026)
